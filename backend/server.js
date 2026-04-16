@@ -104,6 +104,14 @@ app.use(cors({
       }
     }
     
+    // In production, allow Vercel preview deployments
+    if (process.env.NODE_ENV === 'production') {
+      // Allow all Vercel deployments (production and preview)
+      if (origin.includes('.vercel.app')) {
+        return callback(null, true);
+      }
+    }
+    
     if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
