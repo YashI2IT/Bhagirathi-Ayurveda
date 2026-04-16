@@ -17,7 +17,7 @@ Region: Oregon (US West)
 Branch: main
 Root Directory: backend          ⚠️ IMPORTANT!
 Runtime: Node
-Build Command: npm install
+Build Command: npm install       (or leave empty)
 Start Command: npm start
 Instance Type: Free
 ```
